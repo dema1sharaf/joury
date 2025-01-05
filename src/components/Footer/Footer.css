@@ -1,0 +1,83 @@
+.footer {
+    background: linear-gradient(to bottom, #fcd4e1, #f8a9c4); /* Soft gradient */
+    color: #6b4f4f; /* Muted brown for text */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #7a497f; /* Deep lavender for headings */
+}
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .social-icons i {
+    margin-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .language-selector select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .app-buttons img {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .icons {
+        display: flex;
+        gap: 15px;
+        font-size: 24px;
+      }
+
+    .icon {
+         color: #005073; /* Soft teal for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+      }
+      
+      .icon:hover {
+        color: #f06292; /* Change color on hover */
+      }
+  }
+  
