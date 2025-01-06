@@ -1,0 +1,14 @@
+.language-selector {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #9e99ee;
+    gap: 15px;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+
+  
+  .language-selector:hover {
+    color: #005073; /* Change color on hover */
+  }

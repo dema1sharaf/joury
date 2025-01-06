@@ -1,0 +1,44 @@
+/* Slide.css */
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .slide-content {
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    max-width: 500px;
+  }
+  
+  .slide-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .slide-content button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .slide-content button:hover {
+    background-color: #ff4a3d;
+  }
+ 

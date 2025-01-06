@@ -1,25 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./Header.css"
-import { FaShoppingCart, FaUser, FaLanguage, FaHeart, FaSearch } from "react-icons/fa"; // Import icons from React Icons
+import { FaShoppingCart, FaUser, FaHeart, FaSearch } from "react-icons/fa"; // Import icons from React Icons
 import logo from "../../assets/logo.ico"
 import { useTranslation } from 'react-i18next';
+import LanguageSelector from "../Language/LanguageSelector";
 
 
 const Header = () => {
 
-  const { t , i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng)
-    changeDirection(lng);
-  }
-
-  const changeDirection = (lng) => {
-    document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
-  };
 
 return <header className="header">
-     <img width="120" height="75" src={logo} alt="Logo" />
+     <img width="120" height="75" src={logo} alt="Logo"  loading="lazy"/>
   <nav>
     <ul>
       <li><a href="#home">{ t("All Products") }</a></li>
@@ -33,13 +26,13 @@ return <header className="header">
 
   <div className="icons">
         {/* Adding the icons */}
-        <FaSearch className="icon" />
-        <FaHeart className="icon" />
-        <FaLanguage className="icon"  onClick={ () =>
-          changeLanguage(i18n.language === "en" ? "ar" : "en" )
-          }/>
-        <FaUser className="icon" />
-        <FaShoppingCart className="icon" />
+        <FaSearch className="icon" aria-label="search" />
+        <FaHeart className="icon" aria-label="Favorites" />
+        <Suspense fallback={<div>Loading...</div>}>
+        <LanguageSelector />
+        </Suspense>
+        <FaUser aria-label="User Profile" className="icon" />
+        <FaShoppingCart aria-label="Shopping Cart" className="icon" />
       </div>
 
 </header>

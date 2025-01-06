@@ -1,0 +1,12 @@
+/* styles.css */
+
+/* Section styling */
+.SectionMiniCards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  

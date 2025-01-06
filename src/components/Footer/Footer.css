@@ -10,6 +10,8 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
+
+ 
   
   .footer-section {
     display: flex;
@@ -43,6 +45,7 @@
     align-items: center;
     margin-top: 20px;
   }
+  
   
   .language-selector select {
     padding: 5px;
