@@ -1,0 +1,118 @@
+/* Base container styles */
+.gift-container {
+    text-align: center;
+    /* padding: 20px; */
+    position: relative; /* Establish a positioning context for the buttons */
+  }
+  
+  /* Headline styling */
+  .headline {
+    color: #003333; /* Dark teal */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid layout */
+  .items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual item styles */
+  .item {
+    width: 150px;
+    text-align: center;
+  }
+  
+  /* Circular image styling */
+  .image-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #f1ebe2; /* Soft beige */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .image-circle img {
+    width: 80px;
+    height: auto;
+  }
+  
+  /* Text under each item */
+  .item-text {
+    margin-top: 10px;
+    color: #003333;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .items-grid {
+      gap: 15px;
+    }
+  
+    .item {
+      width: 120px;
+    }
+  
+    .image-circle {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .item-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+/* Pagination Controls */
+.pagination-controls {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    width: 100%; /* Span the full width of the grid */
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%); /* Align center vertically */
+    z-index: 10; /* Ensure it overlaps the product-grid items */
+    pointer-events: none; /* Prevent buttons from blocking clicks on grid items */
+  }
+    /* Pagination Buttons */
+    .pagination-arrow {
+      pointer-events: auto; /* Re-enable clicks specifically for buttons */
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      border: 1px solid #ccc;
+      color: #333;
+      padding: 10px 15px;
+      /* border-radius: 4px; */
+      cursor: pointer;
+      font-size: 27px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    
+    .pagination-number.active {
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .pagination-arrow:hover:not(.disabled) {
+      background-color: #eaeaea;
+      color: #000;
+    }
+    
+    .pagination-arrow.disabled {
+      background-color: #f0f0f0;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+  

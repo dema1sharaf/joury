@@ -70,6 +70,7 @@ const ProductGrid = ({title}) => {
         {/* Section Title */}
         <h2 className="section-title">{title}</h2>
 
+      { itemsPerPage !== BestSellerArray.length ?
         <div className="pagination-controls">
         {/* Left Arrow */}
         <button
@@ -91,7 +92,7 @@ const ProductGrid = ({title}) => {
         >
           →
         </button>
-      </div>
+      </div> : "" }
 
         <div className="product-grid">
         {currentFlower.map( (product,index) => (
