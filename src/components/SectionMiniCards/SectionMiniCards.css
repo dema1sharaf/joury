@@ -2,11 +2,35 @@
 
 /* Section styling */
 .SectionMiniCards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .SectionMiniCards {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center align items */
+    gap: 15px; /* Reduce gap for smaller screens */
+    padding: 15px; /* Adjust padding */
   }
-  
+  .SectionMiniCards p{
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SectionMiniCards {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 10px; /* Further reduce gap */
+    padding: 10px; /* Minimize padding for mobile */
+  }
+  .SectionMiniCards p{
+    max-width: 200px;
+  }
+}

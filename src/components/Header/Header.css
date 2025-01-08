@@ -1,4 +1,4 @@
-.header{
+.header {
   background: linear-gradient(to right, #f8a9c4, #fcd4e1); /* Soft gradient */
   color: #FFFFFF; /* White text */
   padding: 12px 12px;
@@ -7,45 +7,95 @@
   align-items: center;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+  position: relative; /* For positioning the burger menu */
+}
 
-  .header img {
-    cursor: pointer;
+.header img {
+  cursor: pointer;
+  max-width: 100px; /* Scale logo for smaller screens */
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF; /* White text */
+  font-family: math;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #005073;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #9e99ee;
+}
+
+.icon:hover {
+  color: #005073; /* Change color on hover */
+}
+
+/* Burger Menu Styling */
+.burger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-line {
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Hide the nav by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 12px;
+    background: linear-gradient(to right, #f8a9c4, #fcd4e1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-
-  }
-  nav a {
-    text-decoration: none;
-    color: #FFFFFF; /* White text */
-    font-family: math;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 
-  nav a:hover {
-    color: #005073;
+  .burger-menu {
+    display: flex; /* Show the burger menu */
   }
-  
-  .icons {
-    display: flex;
-    gap: 15px;
-    font-size: 24px;
+
+  nav.active {
+    display: flex; /* Show nav when active */
   }
-  
-  .icon {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #9e99ee;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .icon:hover {
-    color: #005073; /* Change color on hover */
-  }
+}
